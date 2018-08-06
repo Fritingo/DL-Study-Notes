@@ -5,7 +5,7 @@
 -------------
 <p>經常用於處理序列相關的問題</p>
 
-##結構
+## 結構
 
 ![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Recurrent_Neural_Networks/rnn1.jpg)
 

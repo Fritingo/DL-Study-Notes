@@ -3,7 +3,7 @@
 
 intro
 -------------
-<p>簡單來說就是經過NN之後產生參數影響下次使用NN的解果</p>
+<p>每一次hidden layer的output都會被存到memory，之後的hidden layer也會考慮memory內的值，影響下次使用hidden layer的output</p>
 
 ![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Recurrent_Neural_Networks/rnn1.jpg)
 

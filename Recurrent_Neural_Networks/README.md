@@ -23,5 +23,7 @@
 
 <p>LSTM 其實就是將 RNN 中 Hidden Layer 的一個神經元，用一個更加複雜的結構替換</p>
 
-<p>LSTM 有 Input Gate , Output Gate , Forget Gate /n
-  adfadf</p>
+<p>LSTM 有 Input Gate , Output Gate , Forget Gate </p>
+<p>Input Gate 決定 input 有沒有進到 Memory Block</p>
+<p>Forget Gate 決定要不要洗掉原來 Memory 內的值(Forget Gate close Memory = 0)，接者 Memory 的值要再加上通過 Input Gate 的值</p>
+<p>Output Gate 決定是否輸出 Memory 經過 hidden layer 的值</p>

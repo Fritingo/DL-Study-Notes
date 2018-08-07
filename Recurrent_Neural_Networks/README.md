@@ -15,7 +15,7 @@
 
 <p>並非三個 NN 而是同一個 NN (使用相同權重不同時間點)可以看到前一個 hidden layer 的 output 帶到下一個時間點 hidden layer</p>
 
-### LSTM長短期記憶模型
+### LSTM 長短期記憶模型(Long Short Term Memory Network)
 
 <p>如果有人說 RNN ，通常是指 LSTM ，而不是單純的 RNN</p>
 

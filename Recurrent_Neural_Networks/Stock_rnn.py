@@ -15,25 +15,25 @@ training_set = dataset_train.iloc[:, 1:2].values
 # print(training_set)
 # print(np.shape(training_set))
 
-# Feature Scaling
+# Feature Scaling 特徵縮放
 from sklearn.preprocessing import MinMaxScaler
-#轉乘 0 ~ 1 之間(X_std = (X - X.min(axis=0)) / (X.max(axis=0) - X.min(axis=0))X_scaled = X_std * (max - min) + min)
+#轉成 0 ~ 1 之間(X_std = (X - X.min(axis=0)) / (X.max(axis=0) - X.min(axis=0))X_scaled = X_std * (max - min) + min)
 sc = MinMaxScaler(feature_range = (0, 1))
 training_set_scaled = sc.fit_transform(training_set)
-print(training_set_scaled)
-print(np.shape(training_set_scaled))
+# print(training_set_scaled)
+# print(np.shape(training_set_scaled))
 
 # Creating a data structure with 60 timesteps and 1 output
 X_train = []
 y_train = []
 #set timesteps(60)
 for i in range(60, 1258):
-    X_train.append(training_set_scaled[i-60:i, 0])#to 2d
-    y_train.append(training_set_scaled[i, 0])
-print(X_train)
-print(np.shape(X_train))
-print(y_train)
-print(np.shape(y_train))
+    X_train.append(training_set_scaled[i-60:i, 0])#to 2d 前60個
+    y_train.append(training_set_scaled[i, 0])#第61個
+# print(X_train)
+# print(np.shape(X_train))
+# print(y_train)
+# print(np.shape(y_train))
 X_train, y_train = np.array(X_train), np.array(y_train)
 
 # Reshaping to 3d
@@ -56,7 +56,7 @@ regressor = Sequential()
 # Adding the first LSTM layer and some Dropout regularisation
 #layer(LSTM):模型.add(LSTM(hidden_layer_neurons數,返回序列,輸入參數數))
 #return_sequences(False 返回單個 hidden state)(True 返回全部 hidden state)
-#hidden state (目前NN輸出參數、下一個時間NN考慮參數)cell state(影響閘、hidden state的參數)
+#hidden state (目前hidden layer輸出參數、下一個時間點hidden layer考慮參數)cell state(影響Gate、hidden state的參數)
 regressor.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train.shape[1], 1)))#X_train.shape[1] is timesteps
 regressor.add(Dropout(0.2))#捨棄神經元20%(避免overfit)
 
@@ -81,7 +81,7 @@ regressor.add(Dense(units = 1))
 regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 
 # Fitting the RNN to the Training set
-#模型.compile(X_train, y_train, 批量, 代)
+#模型.compile(X_train, y_train, 代, 批量)
 regressor.fit(X_train, y_train, epochs = 100, batch_size = 32)
 
 #Save model

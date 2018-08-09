@@ -47,6 +47,7 @@ show()
 # Finding the frauds(欺騙)
 mappings = som.win_map(X)
 #get frauds id
-frauds = np.concatenate((mappings[(8,1)], mappings[(6,8)]), axis = 0)#winner 
-frauds = sc.inverse_transform(frauds)
+frauds = np.concatenate((mappings[(3 , 8)], mappings[(2 , 5)]), axis = 0)#winner
+#轉換成labels
+frauds = sc.inverse_transform(frauds)#id
 print(frauds)

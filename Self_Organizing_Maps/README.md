@@ -32,5 +32,7 @@ Refer
 -------------------------------------
 
 http://www.ai-junkie.com/ann/som/som1.html
+
 https://dotblogs.com.tw/dragon229/2013/02/04/89919
+
 https://glowingpython.blogspot.com/2013/09/self-organizing-maps.html

@@ -13,7 +13,7 @@
 
 <p>SOM是由Input layer和Computation layer構成的兩層網絡(全連接)</p>
 
-![image]
+![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Self_Organizing_Maps/som2.png)
 
 steps
 --------------------------------------------------
@@ -24,6 +24,7 @@ steps
 <p>5)調整每個相鄰節點（在步驟4中找到的節點）權重以使它們更像輸入vector。(節點離BMU越近，其權重就越大)</p>
 <p>6)從步驟2重複迭代直到收斂</p>
 
-![image]
-![image]
-![image]
+![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Self_Organizing_Maps/som3.jpg)
+
+![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Self_Organizing_Maps/som4.jpg)
+

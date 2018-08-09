@@ -28,3 +28,4 @@ steps
 
 ![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Self_Organizing_Maps/som4.jpg)
 
+(http://www.ai-junkie.com/ann/som/som1.html)

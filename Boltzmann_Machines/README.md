@@ -25,6 +25,6 @@
  -----------------------------------------------
  <p>將 RBM 堆疊起來、建立一個多層的神經網路，成為 DBN</p>
  
- ![image](hhttps://github.com/cbc106013/DL-Study-Notes/blob/master/Boltzmann_Machines/bm1.png)
+ ![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Boltzmann_Machines/bm1.png)
  
  <p>預先訓練完後，在最後一層才放「分類器」。無監督或半監督、逐層的預訓練(unsupervised/semi-supervised, layer-wise pre-training)的過程</p>

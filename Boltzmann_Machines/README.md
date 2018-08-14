@@ -28,3 +28,7 @@
  ![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/Boltzmann_Machines/bm1.png)
  
  <p>預先訓練完後，在最後一層才放「分類器」。無監督或半監督、逐層的預訓練(unsupervised/semi-supervised, layer-wise pre-training)的過程</p>
+
+Refer
+------------------------------------------------
+https://www.stockfeel.com.tw/%E9%A1%9E%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF%E7%9A%84%E5%BE%A9%E8%88%88%EF%BC%9A%E6%B7%B1%E5%BA%A6%E5%AD%B8%E7%BF%92%E7%B0%A1%E5%8F%B2/

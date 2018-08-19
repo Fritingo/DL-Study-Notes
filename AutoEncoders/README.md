@@ -8,4 +8,10 @@
 
 <p>而hidden layer 就是資料的 feature ，所以 hidden layer 數較少，以達到壓縮資訊的目的</p>
 
-![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/AutoEncoders/autoencoder1.PNG)
+![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/AutoEncoders/autoencoder1.gif)
+
+Refer
+----------------------------------------------------
+https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/
+
+https://www.ycc.idv.tw/ml-course-techniques_6.html

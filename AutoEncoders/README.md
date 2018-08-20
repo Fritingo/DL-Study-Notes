@@ -10,6 +10,10 @@
 
 ![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/AutoEncoders/autoencoder1.gif)
 
+<p>也可以有很多層</p>
+
+![image](https://github.com/cbc106013/DL-Study-Notes/blob/master/AutoEncoders/autoencoder2.png)
+
 Refer
 ----------------------------------------------------
 https://probablydance.com/2016/04/30/neural-networks-are-impressively-good-at-compression/

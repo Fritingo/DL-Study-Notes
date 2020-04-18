@@ -1,9 +1,13 @@
 import numpy  as np
 import matplotlib.pyplot as plt
 from scipy.spatial import distance
+from mpl_toolkits.mplot3d import Axes3D
 
 
-gene_num = 2 #基因數
+fig = plt.figure()
+ax = Axes3D(fig)
+
+gene_num = 3 #基因數
 chromosome_num = 10#染色體數
 iteration_num = 50#代數
 mutation_rate = 0.3#突變率
@@ -65,15 +69,9 @@ for iteration in range(iteration_num):#迭代
     error = distance.euclidean(best_chromosome, goal)#最高適合度染色體與目標距離
       
 
-    plt.clf()#清理畫面
-    plt.scatter(population[:,0], population[:,1], color='blue', s=50, alpha=0.3, marker='o')#畫人口
-    plt.scatter(best_chromosome[0], best_chromosome[1], color='green', s=250, alpha=0.7, marker='+')#畫最高適合度染色體
-    plt.scatter(goal[0], goal[1], color='red', s=250, alpha=1.0, marker='*')#畫目標
+
+ax.scatter(population[:,0], population[:,1], population[:,2], s=50, c='b', alpha=0.3, marker='o')#畫人口
+ax.scatter(best_chromosome[0],best_chromosome[1], best_chromosome[2], s=250, c='g', alpha=0.7, marker='+')#畫最高適合度染色體
+ax.scatter(goal[0], goal[1], goal[2], s=250, c='r', alpha=1.0, marker='*')#畫目標
+
     
-    
-    plt.title('Iteration: ' + str(iteration) + ', Error: ' + str(error))#畫標題
-    plt.xlim(0,1)#x軸上下限
-    plt.ylim(0,1)#y軸上下限
-    plt.grid()#畫格子
-    plt.show()#顯示畫
-    plt.pause(0.2)#sleep 0.2

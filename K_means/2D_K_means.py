@@ -3,7 +3,7 @@ import numpy as np
 from scipy.spatial import distance
 
 
-K = 8
+K = 3
 data_num = 100
 data_dim = 2
 c_color = ['r','g','b','c','m','y','k','purple']
@@ -32,15 +32,16 @@ while(k_center_dis!=0):
     
     for i in range(data_num):#draw color
         dst_list = []
-        for center_num in range(K):
+        for center_num in range(K):#計算每一點與中心距離
             dst = distance.euclidean(center[center_num,:],data[i,:])
             dst_list.append(dst)
         
-        cluster = np.argmin(dst_list)
+        cluster = np.argmin(dst_list)#最小值index
         del dst_list[:]
         cluster_arr.append(cluster)
+        
         plt.scatter(data[i,0],data[i,1],color=c_color[cluster],s=50,alpha=0.3)
-        for center_num in range(K):
+        for center_num in range(K):# 統計各數值
             if cluster == center_num:
                 AllPos_Num[center_num,0] = AllPos_Num[center_num,0]+data[i,0]
                 AllPos_Num[center_num,1] = AllPos_Num[center_num,1]+data[i,1]
@@ -49,8 +50,8 @@ while(k_center_dis!=0):
     k_center_dis = 0
     for i in range(K):#draw K and star
         plt.scatter(center[i,0],center[i,1],color=c_color[i],s=100,alpha=1,marker='+')
-        plt.scatter(AllPos_Num[i,0]/AllPos_Num[i,2],AllPos_Num[i,1]/AllPos_Num[i,2],color=c_color[i],s=100,alpha=1,marker='*')
-        k_center_dis = k_center_dis + distance.euclidean(center[i,:],[AllPos_Num[i,0]/AllPos_Num[i,2],AllPos_Num[i,1]/AllPos_Num[i,2]])
+        plt.scatter(AllPos_Num[i,0]/AllPos_Num[i,2],AllPos_Num[i,1]/AllPos_Num[i,2],color=c_color[i],s=100,alpha=1,marker='*')#中心點 同一類之平均值
+        k_center_dis =distance.euclidean(center[i,:],[AllPos_Num[i,0]/AllPos_Num[i,2],AllPos_Num[i,1]/AllPos_Num[i,2]])#k 與相對應中心點距離
 
     plt.title('Iteration:'+str(iteration)+' distance:'+str(k_center_dis))
     for i in range(K):

@@ -3,9 +3,8 @@ import matplotlib.pyplot as plt
 from scipy.spatial import distance
 from mpl_toolkits.mplot3d import Axes3D
 
-
 fig = plt.figure()
-ax = Axes3D(fig)
+ax = fig.add_subplot(1, 1, 1, projection= '3d')
 
 gene_num = 3 #基因數
 chromosome_num = 10#染色體數
@@ -29,7 +28,7 @@ for i in range(chromosome_num):#所有適合度
     fitness_array.append(fitness)#加到適合度arrary
     
 for iteration in range(iteration_num):#迭代
-
+    
     selected_idx = np.argsort(fitness_array)[-select_num:]#挑出最適合的選擇的染色體index np.argsort()排序由小到大index [-select_num:]倒數選擇的染色體數
     temp_population = np.copy(population[selected_idx])#最適合的選擇的染色體
     
@@ -69,9 +68,17 @@ for iteration in range(iteration_num):#迭代
     error = distance.euclidean(best_chromosome, goal)#最高適合度染色體與目標距離
       
 
-
-ax.scatter(population[:,0], population[:,1], population[:,2], s=50, c='b', alpha=0.3, marker='o')#畫人口
-ax.scatter(best_chromosome[0],best_chromosome[1], best_chromosome[2], s=250, c='g', alpha=0.7, marker='+')#畫最高適合度染色體
-ax.scatter(goal[0], goal[1], goal[2], s=250, c='r', alpha=1.0, marker='*')#畫目標
+    ax.clear()
+    ax.scatter(population[:,0], population[:,1], population[:,2], s=50, c='b', alpha=0.3, marker='o')#畫人口
+    ax.scatter(best_chromosome[0],best_chromosome[1], best_chromosome[2], s=250, c='g', alpha=0.7, marker='+')#畫最高適合度染色體
+    ax.scatter(goal[0], goal[1], goal[2], s=250, c='r', alpha=1.0, marker='*')#畫目標
+   
+    ax.set_xlim3d(0,1)
+    ax.set_ylim3d(0,1)
+    ax.set_zlim3d(0,1)
+    
+    plt.title('Iteration: ' + str(iteration) + ', Error: ' + str(error))#畫標題
+  
+    plt.pause(0.2)#sleep 0.2
 
     

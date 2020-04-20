@@ -33,7 +33,7 @@ def neightbourhood_points(X,x_centroid, dist=3):#鄰近粒子平均值(粒子,�
     return eligible_X, mean#回傳
 
 x = np.copy(data)
-dis_bt = 100 #隨機設一較大去比較 距離
+
 iteration = 0 #代數
 for i in range(10):#迭代
     mean = np.zeros((data_num,data_dim))#重設mean
@@ -68,9 +68,9 @@ for i in range(data_num):#找重心
             found = True
             break
     if not found:
-        center = np.concatenate((center,x[i].reshape((1,2))),axis=0)
+         center = np.concatenate((center,x[i].reshape((1,2))),axis=0)
 
-for center_num in range(4):#畫重心
+for center_num in range(len(center)):#畫重心
     plt.scatter(center[center_num,0],center[center_num,1],color=c_color[center_num],s=250,alpha=1,marker='*')
 
 cluster_arr = []

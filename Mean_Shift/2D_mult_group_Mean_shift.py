@@ -1,7 +1,8 @@
 import numpy as np
-np.set_printoptions(threshold=np.inf)
+#np.set_printoptions(threshold=np.inf)
 import matplotlib.pyplot as plt
 from scipy.spatial import distance
+#import matplotlib as plt
 
 
 c_color = ['r','g','b','c','m','y','k','purple']

@@ -5,7 +5,7 @@ from scipy.spatial import distance
 from mpl_toolkits.mplot3d import Axes3D
 
 
-goal_num = 5
+goal_num = 10
 data_dim = 3
 par_num = 5
 par_dim = goal_num
@@ -30,10 +30,10 @@ start = np.random.rand(data_dim)
 class Particle_Class:
     fit = 0
     pb_fit = 0
-    x = np.random.rand(par_dim)
+    x = np.array([.0]*par_dim)
     pb = np.copy(x)
     v = np.array([.0]*par_dim)
-    x_path = np.argsort(x)
+    x_path = np.array([.0]*par_dim)
     
     def get_fit(self):
         self.x_path = np.argsort(self.x)
@@ -50,7 +50,7 @@ class Particle_Class:
     
 class PSO_Class:
     gb_fit = 0
-    gb =  np.random.rand(par_dim)
+    gb =  np.array([.0]*par_dim)
     particle = [Particle_Class()for i in range(par_num)]
     gb_path = np.argsort(gb)
     gb_fit_list = []

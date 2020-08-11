@@ -34,6 +34,7 @@ y = np.arange(y_min,y_max,0.5)
 xv , yv = np.meshgrid(x,y)
 zv = reversed_ackley(xv,yv)
 
+
 #plot surface
 ax1.plot_surface(xv,yv,zv,cmap='terrain',alpha=0.2)
 

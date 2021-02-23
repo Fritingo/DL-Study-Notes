@@ -81,4 +81,4 @@ for iteration in range(iteration_num):#迭代
   
     plt.pause(0.2)#sleep 0.2
 
-    
+plt.show()

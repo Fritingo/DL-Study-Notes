@@ -5,7 +5,7 @@ from scipy.spatial import distance
 
 gene_num = 2 #基因數
 chromosome_num = 10#染色體數
-iteration_num = 50#代數
+iteration_num = 5#代數
 mutation_rate = 0.3#突變率
 crossover_rate = 0.7#交配率
 select_ratio = 0.3#選擇比例

@@ -94,7 +94,7 @@ for i in range(data_num):#draw color
         
         ax.scatter(data[i,0],data[i,1],data[i,2], s=50, c=c_color[cluster], alpha=0.3, marker='o')#畫顏色
 
-                 
+plt.show()             
 
 
     

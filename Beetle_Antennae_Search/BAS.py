@@ -1,7 +1,8 @@
 import numpy as np
 import math
-import matplotlib.pyplot as plt
 from scipy.spatial import distance
+import matplotlib.pyplot as plt
+
 
 bettle_tentacles_d = 0.04
 
@@ -118,8 +119,10 @@ while(best_fitness<0.99):
     
     
     plt.plot(fitness_list,label = 'fitness')
-    plt.show()
+    # plt.show()
     plt.subplot(211)
     plt.title('iteration ' + str(iteration)+' fitness '+str(best_fitness))
     
     plt.pause(0.2)
+
+plt.show()

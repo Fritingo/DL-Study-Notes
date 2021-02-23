@@ -62,5 +62,5 @@ while(n_center_bt_i_center!=0):
     plt.xlim(-6,6)
     plt.ylim(-6,6)
     plt.grid()
-    plt.show()
+    # plt.show()
     plt.pause(0.5)

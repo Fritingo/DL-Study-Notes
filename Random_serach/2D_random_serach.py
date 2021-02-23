@@ -29,7 +29,7 @@ error = dst_min #error 是最小距離
 plt.xlim(0,1)#x軸上下限
 plt.ylim(0,1)#y軸上下限
 plt.grid()#畫格子
-plt.show()#顯示畫
+
 plt.pause(0.2)#sleep 0.2
 
 for i in range(10):#迭代
@@ -58,5 +58,7 @@ for i in range(10):#迭代
     plt.xlim(0,1)#x軸上下限
     plt.ylim(0,1)#y軸上下限
     plt.grid()#畫格子
-    plt.show()#顯示畫
+    # plt.show()#顯示畫
     plt.pause(0.2)#sleep 0.2
+
+plt.show()

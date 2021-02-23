@@ -51,7 +51,7 @@ for i in range(10):#迭代
     plt.title('iteration' + str(iteration))
     iteration = iteration + 1
     plt.grid()
-    plt.show()
+    # plt.show()
     plt.pause(0.1)
     
 #重畫group圖

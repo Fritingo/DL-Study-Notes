@@ -44,3 +44,4 @@ for interion in range(10):
     
     plt.title('interion'+str(interion)+'error '+str(error))
     plt.pause(0.2)
+plt.show()

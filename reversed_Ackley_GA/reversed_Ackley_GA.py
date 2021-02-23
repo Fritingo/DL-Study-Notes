@@ -119,5 +119,5 @@ while(iteration<30):
     
     plt.pause(0.2)
     plt.draw()
-    plt.show()
+plt.show()
     

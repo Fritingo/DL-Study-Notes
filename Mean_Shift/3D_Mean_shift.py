@@ -50,14 +50,16 @@ while(n_center_bt_i_center!=0):
     interest_center = [AllPos_Num[0]/AllPos_Num[3],AllPos_Num[1]/AllPos_Num[3],AllPos_Num[2]/AllPos_Num[3]]
 
     # plot all data
-    ax.scatter(data[:,0],data[:,1],data[:,2], s=50, c='b', alpha=0.02, marker='o')
+    ax.scatter(data[:,0],data[:,1],data[:,2], s=50, c='b', alpha=0.05, marker='o')
     ##plot new interest center
     ax.scatter(interest_center[0],interest_center[1],interest_center[2],color='k',s=250,alpha=1.0,marker='+')
     #plot interest
-    ax.scatter(eligible_X[:,0],eligible_X[:,1],eligible_X[:,2],color='g',s=50,alpha=0.03)
+    ax.scatter(eligible_X[:,0],eligible_X[:,1],eligible_X[:,2],color='g',s=50,alpha=0.1)
     #plot neighbourth center
     ax.scatter(AllPos_Num[0]/AllPos_Num[3],AllPos_Num[1]/AllPos_Num[3],AllPos_Num[2]/AllPos_Num[3],color='r',s=250,alpha=1,marker='*')
     plt.title('iteration ' + str(iteration)+' error ' + str(n_center_bt_i_center))
     iteration = iteration + 1
     
     plt.pause(0.2)
+
+plt.show()

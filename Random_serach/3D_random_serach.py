@@ -57,3 +57,5 @@ while(error != 0):#迭代
     plt.title('Iteration: ' + str(iteration) + ', Error: ' + str(error))#畫標題
   
     plt.pause(0.2)#sleep 0.2
+
+plt.show()

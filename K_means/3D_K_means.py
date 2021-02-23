@@ -66,3 +66,4 @@ while(k_center_dis!=0):
     iteration = iteration + 1
         
     plt.pause(0.2)
+plt.show()

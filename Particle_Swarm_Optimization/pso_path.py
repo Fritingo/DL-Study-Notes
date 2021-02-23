@@ -120,7 +120,7 @@ class PSO_Class:
         
         
         ax1.grid()
-        plt.show()
+        # plt.show()
         plt.pause(1)
         
     
@@ -138,3 +138,5 @@ while (not_update<30):
     PSO.update()
 
     PSO.plot()
+
+plt.show()
